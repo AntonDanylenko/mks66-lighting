@@ -85,10 +85,10 @@ def draw_polygons( polygons, screen, zbuffer, view, ambient, light, areflect, dr
     while point < len(polygons) - 2:
 
         normal = calculate_normal(polygons, point)[:]
-
+        normalize(normal)
+        
         #print normal
         if normal[2] > 0:
-
             color = get_lighting(normal, view, ambient, light, areflect, dreflect, sreflect )
             scanline_convert(polygons, point, screen, zbuffer, color)
 
