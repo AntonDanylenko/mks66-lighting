@@ -28,8 +28,8 @@ def get_lighting(normal, view, ambient, light, areflect, dreflect, sreflect ):
     slight = calculate_specular(light,sreflect,view,normal)
     for x in range(3):
         lighting.append(alight[x] +\
-                        dlight[x])# + \
-                        #slight[x])
+                        dlight[x] + \
+                        slight[x])
     #print(lighting)
     lighting = limit_color(lighting)
     #print(lighting)
@@ -56,7 +56,7 @@ def calculate_diffuse(light, dreflect, normal):
 
 def calculate_specular(light, sreflect, view, normal):
     specular = []
-    h = [x*y for x,y in view,light[0]]
+    h = [view[x]*light[0][x] for x in range(3)]
     for x in range(3):
         specular.append(sreflect[x] * max(0,dot_product(normal,h))**4 * light[1][x])
     return specular
