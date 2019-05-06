@@ -1,10 +1,10 @@
 push
 rotate
-x 30
+x -30
 rotate
-y 320
+y -320
 rotate
-z 180
+z -180
 move
 340 500 0
 display
