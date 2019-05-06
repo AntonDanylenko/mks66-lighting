@@ -1,5 +1,4 @@
 push
-ident
 rotate
 x 30
 rotate
@@ -8,5 +7,4 @@ rotate
 z 180
 move
 340 500 0
-apply
 display
