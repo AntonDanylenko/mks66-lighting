@@ -40,24 +40,24 @@ ident(t)
 csystems = [ t ]
 
 
-#parse_file( 'script', edges, polygons, csystems, screen, zbuffer, color, view, ambient, light, areflect, dreflect, sreflect)
+parse_file( 'script', edges, polygons, csystems, screen, zbuffer, color, view, ambient, light, areflect, dreflect, sreflect)
 
 
-screen2 = new_screen()
-t2 = new_matrix()
-ident(t2)
-csystems2 = [ t2 ]
-bowl = []
-cx = 250
-cy = 150
-cz = 0
-r = 5
-height = 0
-while height<=150:
-    add_torus(bowl, cx, cy+height, cz, 5, r, 20)
-    r+=5
-    height=int((r**4)/9000000.0)
-# parse_file('script2', edges, fruit, csystems2, screen2, zbuffer, color, view, ambient, light, areflect, dreflect, sreflect)
-parse_file('script2', edges, bowl, csystems2, screen2, zbuffer, color, view, ambient, light, areflect, dreflect, sreflect)
-draw_polygons(bowl, screen2, zbuffer, view, ambient, light, areflect, dreflect, sreflect)
-save_extension(screen2, 'bowl.png')
+# screen2 = new_screen()
+# t2 = new_matrix()
+# ident(t2)
+# csystems2 = [ t2 ]
+# bowl = []
+# cx = 250
+# cy = 150
+# cz = 0
+# r = 5
+# height = 0
+# while height<=150:
+#     add_torus(bowl, cx, cy+height, cz, 5, r, 20)
+#     r+=5
+#     height=int((r**4)/9000000.0)
+# # parse_file('script2', edges, fruit, csystems2, screen2, zbuffer, color, view, ambient, light, areflect, dreflect, sreflect)
+# parse_file('script2', edges, bowl, csystems2, screen2, zbuffer, color, view, ambient, light, areflect, dreflect, sreflect)
+# draw_polygons(bowl, screen2, zbuffer, view, ambient, light, areflect, dreflect, sreflect)
+# save_extension(screen2, 'bowl.png')
