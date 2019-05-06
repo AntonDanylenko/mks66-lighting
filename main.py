@@ -59,11 +59,6 @@ while height<=150:
     bowl = []
     r+=5
     height=int((r**4)/9000000.0)
-fruit = []
-add_sphere(fruit, 250, 205, 0, 50, 20)
-draw_polygons(fruit, screen2, zbuffer, view, ambient, light, areflect, dreflect, sreflect)
-add_box(bowl, 245, -100, -5, 10, 250, 10)
-draw_polygons(bowl, screen2, zbuffer, view, ambient, light, areflect, dreflect, sreflect)
 # parse_file('script2', edges, fruit, csystems2, screen2, zbuffer, color, view, ambient, light, areflect, dreflect, sreflect)
 # parse_file('script2', edges, bowl, csystems2, screen2, zbuffer, color, view, ambient, light, areflect, dreflect, sreflect)
 save_extension(screen2, 'bowl.png')
