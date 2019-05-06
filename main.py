@@ -57,7 +57,7 @@ while height<=150:
     add_torus(bowl, cx, cy+height, cz, 5, r, 20)
     r+=5
     height=int((r**4)/9000000.0)
-draw_polygons(bowl, screen2, zbuffer, view, ambient, light, areflect, dreflect, sreflect)
 # parse_file('script2', edges, fruit, csystems2, screen2, zbuffer, color, view, ambient, light, areflect, dreflect, sreflect)
-# parse_file('script2', edges, bowl, csystems2, screen2, zbuffer, color, view, ambient, light, areflect, dreflect, sreflect)
+parse_file('script2', edges, bowl, csystems2, screen2, zbuffer, color, view, ambient, light, areflect, dreflect, sreflect)
+draw_polygons(bowl, screen2, zbuffer, view, ambient, light, areflect, dreflect, sreflect)
 save_extension(screen2, 'bowl.png')
